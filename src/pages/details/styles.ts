@@ -15,6 +15,9 @@ interface ITheme {
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
+  @media (max-width: 800px) {
+    height: auto;
+  }
 `;
 
 export const Body = styled.div<IStyled>`
@@ -26,5 +29,13 @@ export const Body = styled.div<IStyled>`
   background-color: ${(props: ITheme) => colors[props.theme.main].background};
   transition: 0.3s ease-out;
   grid-gap: 30px;
-  padding-right: 78px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    padding: 120px 10px;
+  }
+
+  @media (min-width: 800px) {
+    padding-right: 78px;
+  }
 `;

@@ -25,4 +25,8 @@ export const Body = styled.div<IStyled>`
   justify-content: center;
   background-color: ${(props: ITheme) => colors[props.theme.main].background};
   transition: 0.3s ease-out;
+
+  @media (max-width: 800px) {
+    padding-top: 40px;
+  }
 `;

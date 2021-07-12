@@ -33,6 +33,12 @@ export const Container = styled.div<IStyled>`
   align-items: center;
   justify-content: space-between;
   z-index: 2;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    flex-direction: column;
+    height: ${props => (props.effect ? '120px' : '100vh')};
+  }
 `;
 
 export const Logo = styled.img`
@@ -45,10 +51,15 @@ export const Preferences = styled.div<IStyled>`
   grid-gap: 10px;
   align-items: center;
   padding: 0 30px;
-  width: 33.3%;
   justify-content: flex-end;
+  @media (min-width: 800px) {
+    width: 33.3%;
+  }
 `;
 
 export const EmptyComponent = styled.div`
   width: 33.3%;
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
